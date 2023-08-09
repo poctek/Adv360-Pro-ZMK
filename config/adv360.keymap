@@ -22,6 +22,14 @@
   behaviors {
     #include "macros.dtsi"
 
+    td0: tap_dance_0 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "TAP DANCE CMD";
+#binding-cells = <0>;
+           tapping-term-ms = <200>;
+           bindings = <&kp LEFT_COMMAND>, <&kp RIGHT_COMMAND>;
+    };
+
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -43,7 +51,7 @@
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &none                                                                                           &none   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
  &kp LCTRL      &kp A     &kp S     &kp D      &kp F   &kp G                       &none      &kp LCTRL  &kp LALT                  &kp RIGHT_COMMAND    &kp ESC                    &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                             &kp HOME                           &kp C_PP                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp LEFT_COMMAND  &kp BACKSPACE   &kp END                          &kp PG_DN  &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+     &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                       &td0  &kp BACKSPACE   &kp END                          &kp PG_DN  &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
         };
 
