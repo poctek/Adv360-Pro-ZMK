@@ -19,7 +19,6 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define HYPER    LS(LC(LA(LGUI)))
-#define CHANGE_LANG    LEFT_COMMAND(SPACE)
 
 / {
   behaviors {
@@ -30,7 +29,7 @@
         label = "TAP DANCE CMD";
 #binding-cells = <0>;
            tapping-term-ms = <200>;
-           bindings = <&kp LEFT_COMMAND>, <&kp CHANGE_LANG>;
+           bindings = <&kp LEFT_COMMAND>, <&kp RIGHT_COMMAND>;
     };
 
     td1: tap_dance_1 {
