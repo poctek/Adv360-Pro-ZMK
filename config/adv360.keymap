@@ -19,6 +19,7 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define HYPER    LS(LC(LA(LGUI)))
+#define VIM_COPY DQT ASTERISK Y
 
 / {
   behaviors {
@@ -62,7 +63,7 @@
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &none                                                                                           &none   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
  &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &none      &kp LCTRL  &kp LALT                  &kp RIGHT_COMMAND    &kp ESC                    &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                             &kp HOME                           &kp C_PP                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &td0  &kp BACKSPACE   &kp END                          &kp PG_DN  &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &td0  &kp BACKSPACE   &kp END                          &kp VIM_COPY  &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
         };
 
