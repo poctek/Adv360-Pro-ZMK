@@ -68,12 +68,17 @@ macro_tmux_open_0: macro_tmux_open_0{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_open_0";
 #binding-cells = <0>;
-bindings = <&kp LC(A)>, <&kp 0>;
+bindings = <&kp LC(A)>, <&kp NUMBER_0>;
 };
-
-macro_tmux_custom: macro_tmux_custom{
-compatible = "zmk,behavior-macro-one-param";
-label = "macro_tmux_custom";
-#binding-cells = <1>;
-bindings = <&kp LC(A)>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
+macro_tmux_open_1: macro_tmux_open_1{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_open_1";
+#binding-cells = <0>;
+bindings = <&kp LC(A)>, <&kp NUMBER_1>;
+};
+macro_tmux_open_2: macro_tmux_open_2{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_open_2";
+#binding-cells = <0>;
+bindings = <&kp LC(A)>, <&kp NUMBER_2>;
 };
