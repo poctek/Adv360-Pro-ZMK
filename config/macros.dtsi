@@ -44,11 +44,11 @@ macro_tmux_down: macro_tmux_down{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_down";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp A>, <&kp S>, <&kp DOWN>, <&kp ENTER>;
+bindings = <&kp LC(A)>, <&kp S>, <&kp DOWN>, <&kp ENTER>;
 };
 macro_tmux_up: macro_tmux_up{
 compatible = "zmk,behavior-macro";
 label = "macro_tmux_up";
 #binding-cells = <0>;
-bindings = <&kp LCTRL>, <&kp A>, <&kp S>, <&kp UP>, <&kp ENTER>;
+bindings = <&kp LC(A)>, <&kp S>, <&kp UP>, <&kp ENTER>;
 };
