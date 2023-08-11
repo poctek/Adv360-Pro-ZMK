@@ -70,3 +70,10 @@ label = "macro_tmux_open_0";
 #binding-cells = <0>;
 bindings = <&kp LC(A)>, <&kp 0>;
 };
+
+macro_tmux_custom: macro_tmux_custom{
+compatible = "zmk,behavior-macro-one-param";
+label = "macro_tmux_custom";
+#binding-cells = <1>;
+bindings = <&kp LC(A)>, <&macro_param_1to1>, <&kp MACRO_PLACEHOLDER>;
+};
