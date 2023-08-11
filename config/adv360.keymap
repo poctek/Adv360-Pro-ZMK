@@ -61,8 +61,8 @@
  &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                                           &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0                       &kp MINUS
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &none                                                                                           &none   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
  &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &none      &kp LCTRL  &kp LALT                  &kp RIGHT_COMMAND    &kp ESC                    &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                             &macro_tmux_up                           &kp C_PP                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &td0  &kp BACKSPACE   &macro_tmux_down                         &macro_vim_copy &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+ &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &macro_tmux_session_up                           &kp C_PP                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
+     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &td0  &kp BACKSPACE   &macro_tmux_session_down                         &macro_vim_copy &kp ENTER  &mt RIGHT_COMMAND SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
         };
 
@@ -82,7 +82,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &macro_tmux_previous_window  &macro_tmux_next_window                    &trans  &trans  &trans                  &trans  &trans  &trans          &macro_tmux_session_up  &macro_tmux_session_down   &trans   &trans   &trans
             >;
         };
 
