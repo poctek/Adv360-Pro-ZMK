@@ -50,6 +50,14 @@
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
     };
+
+    up_or_tmux_0: up_or_tmux_0 {
+        compatible = "zmk,behavior-mod-morph";
+        label = "TMUX_0";
+        #binding-cells = <0>;
+        bindings = <&kp UP>, <&macro_tmux_open_0>;
+        mods = <(MOD_LGUI)>;
+    };
   };
 
     keymap {
@@ -80,7 +88,7 @@
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &up_or_tmux_0  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &macro_tmux_previous_window  &macro_tmux_next_window                    &trans  &trans  &trans                  &trans  &trans  &trans          &macro_tmux_session_up  &macro_tmux_session_down   &trans   &trans   &trans
             >;

@@ -64,3 +64,9 @@ label = "macro_tmux_previous_window";
 #binding-cells = <0>;
 bindings = <&kp LC(A)>, <&kp P>;
 };
+macro_tmux_open_0: macro_tmux_open_0{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_open_0";
+#binding-cells = <0>;
+bindings = <&kp LC(A)>, <&kp 0>;
+};
