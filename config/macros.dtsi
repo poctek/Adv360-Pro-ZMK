@@ -82,3 +82,34 @@ label = "macro_tmux_open_2";
 #binding-cells = <0>;
 bindings = <&kp LC(A)>, <&kp NUMBER_2>;
 };
+macro_tmux_open_3: macro_tmux_open_3{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_open_3";
+#binding-cells = <0>;
+bindings = <&kp LC(A)>, <&kp NUMBER_3>;
+};
+
+macro_vim_open_0: macro_vim_open_0{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_open_0";
+#binding-cells = <0>;
+bindings = <&kp NUMBER_0>, <&kp G>, <&kp T>;
+};
+macro_vim_open_1: macro_vim_open_1{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_open_1";
+#binding-cells = <0>;
+bindings = <&kp NUMBER_1>, <&kp G>, <&kp T>;
+};
+macro_vim_open_2: macro_vim_open_2{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_open_2";
+#binding-cells = <0>;
+bindings = <&kp NUMBER_2>, <&kp G>, <&kp T>;
+};
+macro_vim_open_3: macro_vim_open_3{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_open_3";
+#binding-cells = <0>;
+bindings = <&kp NUMBER_3>, <&kp G>, <&kp T>;
+};
