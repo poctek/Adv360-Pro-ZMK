@@ -1,3 +1,4 @@
+#binding-cells = <0>;
 macro_quotes: macro_quotes{
 compatible = "zmk,behavior-macro";
 label = "macro_quotes";
@@ -89,12 +90,6 @@ label = "macro_tmux_open_3";
 bindings = <&kp LC(A)>, <&kp NUMBER_3>;
 };
 
-macro_vim_open_0: macro_vim_open_0{
-compatible = "zmk,behavior-macro";
-label = "macro_vim_open_0";
-#binding-cells = <0>;
-bindings = <&kp NUMBER_0>, <&kp G>, <&kp T>;
-};
 macro_vim_open_1: macro_vim_open_1{
 compatible = "zmk,behavior-macro";
 label = "macro_vim_open_1";
@@ -112,4 +107,10 @@ compatible = "zmk,behavior-macro";
 label = "macro_vim_open_3";
 #binding-cells = <0>;
 bindings = <&kp NUMBER_3>, <&kp G>, <&kp T>;
+};
+macro_vim_open_4: macro_vim_open_4{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_open_4";
+#binding-cells = <0>;
+bindings = <&kp NUMBER_4>, <&kp G>, <&kp T>;
 };
