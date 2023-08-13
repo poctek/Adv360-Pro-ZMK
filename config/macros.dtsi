@@ -84,7 +84,7 @@ label = "macro_delete_word";
 #binding-cells = <0>;
 bindings
   = <&macro_press &kp LALT>
-  , <&kp DELETE>
+  , <&kp BSPC>
   , <&macro_release &kp LALT>
   ;
 };

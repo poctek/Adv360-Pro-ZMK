@@ -54,7 +54,6 @@
            bindings = <&kp LCTRL>, <&kp ESC>;
     };
 
-
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_MODS";
@@ -63,14 +62,6 @@
         quick_tap_ms = <175>;
         flavor = "tap-preferred";
         bindings = <&kp>, <&kp>;
-    };
-
-    up_or_tmux_0: up_or_tmux_0 {
-        compatible = "zmk,behavior-mod-morph";
-        label = "TMUX_0";
-        #binding-cells = <0>;
-        bindings = <&kp DOWN>, <&macro_tmux_open_0>;
-        mods = <(MOD_LGUI)>;
     };
   };
 
