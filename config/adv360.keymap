@@ -20,8 +20,8 @@
 
 #define HYPER    LS(LC(LA(LGUI)))
 
-#define BROWSER_NEXTTAB LG(LA(RIGHT))
-#define BROWSER_PREVTAB LG(LA(LEFT))
+#define BROWSER_NEXTTAB LG(LA(UP))
+#define BROWSER_PREVTAB LG(LA(DOWN))
 
 / {
     combos {
