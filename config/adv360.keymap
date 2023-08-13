@@ -102,9 +102,9 @@
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans             &none                                                   &none  &macro_vim_copy  &trans  &trans   &trans   &trans   &trans
- &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &kp LEFT  &kp DOWN &kp UP   &kp RIGHT   &trans
+ &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &trans   &trans
  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBRC  &kp RBRC  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &trans          &trans  &trans   &trans   &trans   &trans
             >;
         };
 
