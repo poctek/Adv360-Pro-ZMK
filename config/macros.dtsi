@@ -88,3 +88,10 @@ bindings
   , <&macro_release &kp LALT>
   ;
 };
+
+macro_tmux_visual_mode: macro_tmux_visual_mode{
+compatible = "zmk,behavior-macro";
+label = "macro_tmux_visual_mode";
+#binding-cells = <0>;
+bindings = <&kp LC(A)>, <&kp LBKT> ;
+};
