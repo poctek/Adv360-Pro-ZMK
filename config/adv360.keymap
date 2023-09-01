@@ -22,6 +22,7 @@
 
 #define BROWSER_NEXTTAB LG(LA(UP))
 #define BROWSER_PREVTAB LG(LA(DOWN))
+#define BROWSER_NEWTAB LG(T)
 
 / {
     combos {
@@ -73,7 +74,7 @@
             bindings = <
  &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                                           &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0                       &kp MINUS
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &none                                                                                           &none   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
- &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &none      &kp LCTRL  &kp LALT                  &kp RGUI    &kp ESC                    &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
+ &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &none      &kp LCTRL  &kp LALT                  &kp BROWSER_NEWTAB    &kp ESC                    &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &none                           &kp BROWSER_NEXTTAB                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
      &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp BROWSER_PREVTAB &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
@@ -93,7 +94,7 @@
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans             &none                                                   &none  &macro_vim_copy  &trans  &trans   &trans   &trans   &trans
- &trans  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &trans   &trans
+ &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &trans   &trans
  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBRC  &kp RBRC  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &kp RGUI          &trans  &trans   &trans   &trans   &trans
             >;
