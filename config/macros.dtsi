@@ -95,3 +95,24 @@ label = "macro_tmux_visual_mode";
 #binding-cells = <0>;
 bindings = <&kp LC(A)>, <&kp LBKT> ;
 };
+
+macro_vim_to_end_of_function: macro_vim_to_end_of_function{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_to_end_of_function";
+#binding-cells = <0>;
+bindings = <&kp LS(DOLLAR)>, <&kp PERCENT> ;
+};
+
+macro_vim_to_end_of_line: macro_vim_to_end_of_line{
+compatible = "zmk,behavior-macro";
+label = "macro_vim_to_end_of_line";
+#binding-cells = <0>;
+bindings = <&kp LS(DOLLAR)>, <&kp H> ;
+};
+
+macro_dollar: macro_dollar{
+compatible = "zmk,behavior-macro";
+label = "macro_dollar";
+#binding-cells = <0>;
+bindings = <&kp DOLLAR>;
+};
