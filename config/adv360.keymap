@@ -28,6 +28,10 @@
 #define BROWSER_PREVTAB LG(LA(DOWN))
 #define BROWSER_NEWTAB LG(T)
 
+&mt {
+    tapping-term-ms = <300>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
