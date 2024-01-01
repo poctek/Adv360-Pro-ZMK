@@ -33,7 +33,7 @@
 };
 
 &lt {
-    quick_tap_ms = <200>;
+    quick_tap_ms = <100>;
 };
 
 / {
@@ -87,9 +87,9 @@
             bindings = <
  &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                                           &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0                       &kp MINUS
    &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &kp HYPER1                                                                                           &kp HYPER3   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
- &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &kp HYPER2      &kp HYPER  &kp LALT                  &kp BROWSER_NEWTAB    &kp ESC                    &kp HYPER4   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
+ &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &kp HYPER2      &tog 4  &kp LALT                  &kp BROWSER_NEWTAB    &kp ESC                    &kp HYPER4   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
  &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &none                           &kp BROWSER_NEXTTAB                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp BROWSER_PREVTAB &kp ENTER  &lt 2 SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+     &mo 2  &kp GRAVE  &kp HYPER  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp BROWSER_PREVTAB &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
         };
 
@@ -106,9 +106,9 @@
         fn {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &macro_vim_to_end_of_function            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &kp LBKT  &kp RBKT  &trans             &none                                                   &none  &macro_vim_copy  &kp CARET  &kp DOLLAR   &macro_vim_to_end_of_function   &trans   &trans
- &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &trans
- &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBRC  &kp RBRC  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &trans  &trans   &trans   &trans   &trans
+ &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &none                                                   &none  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
+ &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
+ &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT  &kp RBKT  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS   &kp EQUAL   &trans
  &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &kp RGUI          &trans  &trans   &trans   &trans   &trans
             >;
         };
@@ -123,13 +123,13 @@
             >;
         };
 
-        layer_navigation {
+        layer_text_edit {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                  &trans  &trans   &none  &trans  &macro_vim_open_1  &macro_vim_open_2   &macro_vim_open_3   &macro_vim_open_4   &trans
- &trans  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &macro_tmux_open_0  &macro_tmux_open_1   &macro_tmux_open_2   &macro_tmux_open_3   &trans
- &trans  &trans  &trans  &macro_tmux_previous_window  &macro_tmux_next_window                    &trans  &trans  &trans                  &trans  &trans  &trans          &macro_tmux_session_up  &macro_tmux_session_down   &trans   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none  &tog 1  &trans                  &trans  &trans   &none  &kp LA(LEFT)  &kp LA(UP)   &kp LA(DOWN)   &kp LA(RIGHT)   &trans   &trans
+ &kp LSHFT  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &kp RSHIFT
+ &trans  &trans  &trans  &kp LEFT  &kp RIGHT                    &kp LGUI  &kp LA(BACKSPACE)  &trans                  &trans  &tog 1  &kp LA(BACKSPACE)          &kp UP  &kp DOWN   &trans   &trans   &trans
             >;
         };
 
