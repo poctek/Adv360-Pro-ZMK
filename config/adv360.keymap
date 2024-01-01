@@ -125,10 +125,10 @@
 
         layer_text_edit {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &trans  &trans  &trans             &none                                                   &none  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &tog 1  &trans                  &trans  &trans   &none  &kp LA(LEFT)  &kp LA(UP)   &kp LA(DOWN)   &kp LA(RIGHT)   &trans   &trans
- &kp LSHFT  &trans  &trans  &trans  &trans  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &kp RSHIFT
+ &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 0                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+ &trans  &trans  &trans  &trans  &kp K_REDO  &trans             &none                                                   &none  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)   &trans   &trans
+ &trans  &trans  &trans  &trans  &trans  &trans             &none  &tog 0  &trans                  &trans  &trans   &none  &kp LA(LEFT)  &kp LA(UP)   &kp LA(DOWN)   &kp LA(RIGHT)   &trans   &trans
+ &kp LSHFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &kp RSHIFT
  &trans  &trans  &trans  &kp LEFT  &kp RIGHT                    &kp LGUI  &kp LA(BACKSPACE)  &trans                  &trans  &tog 1  &kp LA(BACKSPACE)          &kp UP  &kp DOWN   &trans   &trans   &trans
             >;
         };
