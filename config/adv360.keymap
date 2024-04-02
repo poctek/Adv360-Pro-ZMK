@@ -23,6 +23,10 @@
 #define HYPER2    LS(LC(LA(LG(N2))))
 #define HYPER3    LS(LC(LA(LG(N3))))
 #define HYPER4    LS(LC(LA(LG(N4))))
+#define HYPER5    LS(LC(LA(LG(N5))))
+#define HYPER6    LS(LC(LA(LG(N6))))
+#define HYPER7    LS(LC(LA(LG(N7))))
+#define HYPER8    LS(LC(LA(LG(N8))))
 
 #define BROWSER_NEXTTAB LG(LA(UP))
 #define BROWSER_PREVTAB LG(LA(DOWN))
@@ -106,8 +110,8 @@
         fn {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &macro_vim_to_end_of_function            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &none                                                   &none  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
- &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &none  &trans  &trans                  &trans  &trans   &none  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
+ &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &kp HYPER 5                                               &kp HYPER 7  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
+ &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &kp HYPER 6  &trans  &trans                  &trans  &trans   &kp HYPER 8  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT  &kp RBKT  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS   &kp EQUAL   &trans
  &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &kp RGUI          &trans  &trans   &trans   &trans   &trans
             >;
