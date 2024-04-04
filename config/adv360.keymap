@@ -1,11 +1,8 @@
-
 /*
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
-
-
 /* THIS FILE WAS GENERATED!
  *
  * This file was generated automatically. You may or may not want to
@@ -13,22 +10,19 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
 
-&mt {
-    tapping-term-ms = <300>;
-};
+&mt { tapping-term-ms = <300>; };
 
-&lt {
-    quick_tap_ms = <100>;
-};
+&lt { quick_tap_ms = <100>; };
 
 / {
     combos {
         compatible = "zmk,combos";
+
         combo_mo_4 {
             bindings = <&mo 4>;
             timeout-ms = <500>;
@@ -38,90 +32,113 @@
 };
 
 / {
-  behaviors {
-    #include "macros.dtsi"
+    behaviors {
+        #include "macros.dtsi"
 
-    td0: tap_dance_0 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TAP DANCE CMD";
-        #binding-cells = <0>;
-        tapping-term-ms = <350>;
-        bindings = <&kp LGUI>, <&kp RGUI>;
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP DANCE CMD";
+            #binding-cells = <0>;
+            tapping-term-ms = <350>;
+            bindings = <&kp LGUI>, <&kp RGUI>;
+        };
+
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP DANCE LCTRL to ESC";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LCTRL>, <&kp ESC>;
+        };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick_tap_ms = <175>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
-    td1: tap_dance_1 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "TAP DANCE LCTRL to ESC";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp LCTRL>, <&kp ESC>;
-    }
-;
+    macros {
+        macro_vim_copy: macro_vim_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES &kp ASTERISK &kp Y>;
+            label = "MACRO_VIM_COPY";
+        };
 
-    hm: homerow_mods {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_MODS";
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-        quick_tap_ms = <175>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
+        macro_tmux_visual_mode: macro_tmux_visual_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A) &kp LBKT>;
+            label = "MACRO_TMUX_VISUAL_MODE";
+        };
     };
-  };
 
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                                           &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0                       &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &kp LS(LC(LA(LG(N1))))                                                                                           &kp LS(LC(LA(LG(N3))))   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
- &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &kp LS(LC(LA(LG(N2))))      &tog 4  &kp LALT                  &kp LG(T)    &kp ESC                    &kp LS(LC(LA(LG(N4))))   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &none                           &kp LG(LA(UP))                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &mo 4  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp LG(LA(DOWN)) &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                            &mo 3                   &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp LS(LC(LA(LG(N1))))                                                            &kp LS(LC(LA(LG(N3))))  &kp Y   &kp U    &kp I      &kp O     &kp P     &kp BSLH
+&td1       &kp A      &kp S   &kp D     &lt 5 F    &kp G   &kp LS(LC(LA(LG(N2))))  &tog 4         &kp LALT      &kp LG(T)         &kp ESC    &kp LS(LC(LA(LG(N4))))  &kp H   &kp J    &kp K      &kp L     &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
+&kp LSHFT  &kp Z      &kp X   &kp C     &lt 2 V    &kp B                                          &none         &kp LG(LA(UP))                                       &kp N   &lt 5 M  &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 2      &kp GRAVE  &mo 4   &kp LEFT  &kp RIGHT          &kp LGUI                &kp BACKSPACE  &none         &kp LG(LA(DOWN))  &kp ENTER  &kp SPACE                       &kp UP   &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
 
         keypad {
             bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5              &trans                                                                 &mo 3  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T               &none                                                                 &none   &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS   &kp BSLH
-   &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G               &none  &kp LCTRL  &kp LALT                   &kp LGUI  &kp RCTRL      &none   &kp H   &kp KP_N4     &kp KP_N5      &kp KP_N6      &kp KP_PLUS    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                 &kp HOME                  &kp PG_UP                         &kp N   &kp KP_N1     &kp KP_N2      &kp KP_N3     &kp KP_ENTER  &kp RSHFT
-    &mo 2  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT                    &kp BSPC    &kp DEL   &kp END                  &kp PG_DN  &kp ENTER  &kp KP_N0              &kp UP      &kp DOWN     &kp KP_DOT         &kp RBKT      &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                           &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                            &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none         &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_GUI  &kp BACKSPACE  &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
         fn {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &macro_vim_to_end_of_function            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &kp LS(LC(LA(LG(N5))))                                               &kp LS(LC(LA(LG(N7))))  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
- &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &kp LS(LC(LA(LG(N6))))  &trans  &trans                  &trans  &trans   &kp LS(LC(LA(LG(N8))))  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
- &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT  &kp RBKT  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS   &kp EQUAL   &trans
- &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &kp RGUI          &trans  &trans   &trans   &trans   &trans
+&kp F1   &kp F2        &kp F3         &kp F4              &kp F5    &macro_vim_to_end_of_function  &tog 1                                                      &mo 3                   &kp F7                   &kp F8          &kp F9      &kp F10      &kp F11                    &kp F12
+&trans   &trans        &trans         &kp LBRC            &kp RBRC  &trans                         &kp LS(LC(LA(LG(N5))))                                      &kp LS(LC(LA(LG(N7))))  &macro_vim_copy          &kp CARET       &kp DOLLAR  &kp PERCENT  &trans                     &trans
+&kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR            &kp RPAR  &trans                         &kp LS(LC(LA(LG(N6))))  &trans  &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT                 &kp DOWN        &kp UP      &kp RIGHT    &macro_vim_to_end_of_line  &kp ESC
+&trans   &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT            &kp RBKT  &trans                                                         &trans      &trans                                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS     &kp EQUAL                  &trans
+&trans   &trans        &trans         &macro_delete_word  &trans                                   &kp RGUI                &trans  &trans      &trans  &trans  &kp RGUI                                         &trans          &trans      &trans       &trans                     &trans
             >;
         };
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none                                                                          &trans   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none            &bootloader                                                                     &bootloader   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                  &none   &none   &none                  &bt BT_CLR       &none  &rgb_ug RGB_MEFS_CMD 5   &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none         &none                                  &none                       &none                                       &none       &none       &none   &none   &none   &none
-  &none         &none         &none         &none         &none                                &none   &none   &none                       &none  &bl BL_TOG         &rgb_ug RGB_TOG          &bl BL_INC  &bl BL_DEC   &none   &none   &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
             >;
         };
 
         layer_text_edit {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &to 0                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &trans  &kp K_REDO  &trans             &none                                                   &none  &kp LG(LEFT)  &kp LG(DOWN)   &kp LG(UP)   &kp LG(RIGHT)   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &to 0  &trans                  &trans  &trans   &none  &kp LA(LEFT)  &kp LA(DOWN)   &kp LA(UP)   &kp LA(RIGHT)   &trans   &trans
- &kp LSHFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans                            &trans                  &trans                  &trans  &trans  &trans   &trans   &trans   &kp RSHIFT
- &trans  &trans  &trans  &kp LEFT  &kp RIGHT                    &kp LGUI  &kp LA(BACKSPACE)  &trans                  &trans  &to 0  &kp LA(BACKSPACE)          &kp UP  &kp DOWN   &trans   &trans   &trans
+&kp F1     &kp F2      &kp F3     &kp F4      &kp F5       &kp F6  &to 0                                                    &mo 3              &kp F7        &kp F8        &kp F9      &kp F10        &kp F11  &kp F12
+&trans     &trans      &trans     &trans      &kp K_REDO   &trans  &none                                                    &none              &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans   &trans
+&trans     &trans      &trans     &trans      &trans       &trans  &none     &to 0              &trans      &trans  &trans  &none              &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans   &trans
+&kp LSHFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans                               &trans      &trans                             &trans        &trans        &trans      &trans         &trans   &kp RSHIFT
+&trans     &trans      &trans     &kp LEFT    &kp RIGHT            &kp LGUI  &kp LA(BACKSPACE)  &trans      &trans  &to 0   &kp LA(BACKSPACE)                &kp UP        &kp DOWN    &trans         &trans   &trans
             >;
         };
 
+        better_typings {
+            bindings = <
+&trans  &trans  &trans  &trans                &trans                 &trans  &trans                                      &trans  &trans     &trans          &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans  &trans                                      &trans  &trans     &trans          &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp MINUS  &kp UNDERSCORE  &kp PLUS  &kp EQUAL  &trans  &trans
+&trans  &trans  &trans  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans                  &trans      &trans                  &trans     &trans          &trans    &trans     &trans  &trans
+&trans  &trans  &trans  &trans                &trans                         &trans  &trans  &trans      &trans  &trans  &trans             &trans          &trans    &trans     &trans  &trans
+            >;
+        };
     };
 };
