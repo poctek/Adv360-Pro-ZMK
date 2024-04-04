@@ -76,6 +76,13 @@
             bindings = <&kp LC(A) &kp LBKT>;
             label = "MACRO_TMUX_VISUAL_MODE";
         };
+
+        macro_delete_word: macro_delete_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(BACKSPACE)>;
+            label = "MACRO_DELETE_WORD";
+        };
     };
 
     keymap {
@@ -103,11 +110,11 @@
 
         fn {
             bindings = <
-&kp F1   &kp F2        &kp F3         &kp F4              &kp F5    &macro_vim_to_end_of_function  &tog 1                                                      &mo 3                   &kp F7                   &kp F8          &kp F9      &kp F10      &kp F11                    &kp F12
-&trans   &trans        &trans         &kp LBRC            &kp RBRC  &trans                         &kp LS(LC(LA(LG(N5))))                                      &kp LS(LC(LA(LG(N7))))  &macro_vim_copy          &kp CARET       &kp DOLLAR  &kp PERCENT  &trans                     &trans
-&kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR            &kp RPAR  &trans                         &kp LS(LC(LA(LG(N6))))  &trans  &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT                 &kp DOWN        &kp UP      &kp RIGHT    &macro_vim_to_end_of_line  &kp ESC
-&trans   &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT            &kp RBKT  &trans                                                         &trans      &trans                                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS     &kp EQUAL                  &trans
-&trans   &trans        &trans         &macro_delete_word  &trans                                   &kp RGUI                &trans  &trans      &trans  &trans  &kp RGUI                                         &trans          &trans      &trans       &trans                     &trans
+&kp F1   &kp F2        &kp F3         &kp F4              &kp F5    &trans  &tog 1                                                      &mo 3                   &kp F7                   &kp F8          &kp F9      &kp F10      &kp F11    &kp F12
+&trans   &trans        &trans         &kp LBRC            &kp RBRC  &trans  &kp LS(LC(LA(LG(N5))))                                      &kp LS(LC(LA(LG(N7))))  &macro_vim_copy          &kp CARET       &kp DOLLAR  &kp PERCENT  &trans     &trans
+&kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR            &kp RPAR  &trans  &kp LS(LC(LA(LG(N6))))  &trans  &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT                 &kp DOWN        &kp UP      &kp RIGHT    &trans     &kp ESC
+&trans   &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT            &kp RBKT  &trans                                  &trans      &trans                                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS     &kp EQUAL  &trans
+&trans   &trans        &trans         &macro_delete_word  &trans            &kp RGUI                &trans  &trans      &trans  &trans  &kp RGUI                                         &trans          &trans      &trans       &trans     &trans
             >;
         };
 
