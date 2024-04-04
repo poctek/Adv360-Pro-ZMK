@@ -33,8 +33,6 @@
 
 / {
     behaviors {
-        #include "macros.dtsi"
-
         td0: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP DANCE CMD";
