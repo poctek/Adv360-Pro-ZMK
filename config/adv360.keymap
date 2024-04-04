@@ -18,20 +18,6 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#define HYPER     LS(LC(LA(LGUI)))
-#define HYPER1    LS(LC(LA(LG(N1))))
-#define HYPER2    LS(LC(LA(LG(N2))))
-#define HYPER3    LS(LC(LA(LG(N3))))
-#define HYPER4    LS(LC(LA(LG(N4))))
-#define HYPER5    LS(LC(LA(LG(N5))))
-#define HYPER6    LS(LC(LA(LG(N6))))
-#define HYPER7    LS(LC(LA(LG(N7))))
-#define HYPER8    LS(LC(LA(LG(N8))))
-
-#define BROWSER_NEXTTAB LG(LA(UP))
-#define BROWSER_PREVTAB LG(LA(DOWN))
-#define BROWSER_NEWTAB LG(T)
-
 &mt {
     tapping-term-ms = <300>;
 };
@@ -90,10 +76,10 @@
         default_layer {
             bindings = <
  &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                                           &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0                       &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &kp HYPER1                                                                                           &kp HYPER3   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
- &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &kp HYPER2      &tog 4  &kp LALT                  &kp BROWSER_NEWTAB    &kp ESC                    &kp HYPER4   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &none                           &kp BROWSER_NEXTTAB                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
-     &mo 2  &kp GRAVE  &mo 4  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp BROWSER_PREVTAB &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
+   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &kp LS(LC(LA(LG(N1))))                                                                                           &kp LS(LC(LA(LG(N3))))   &kp Y   &kp U      &kp I     &kp O     &kp P                        &kp BSLH
+ &td1      &kp A     &kp S     &kp D      &kp F   &kp G                       &kp LS(LC(LA(LG(N2))))      &tog 4  &kp LALT                  &kp LG(T)    &kp ESC                    &kp LS(LC(LA(LG(N4))))   &kp H   &kp J      &kp K     &kp L  &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
+ &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                                       &none                           &kp LG(LA(UP))                                       &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH                       &kp RSHFT
+     &mo 2  &kp GRAVE  &mo 4  &kp LEFT  &kp RIGHT                       &kp LGUI  &kp BACKSPACE   &none                         &kp LG(LA(DOWN)) &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT                           &mo 2
             >;
         };
 
@@ -110,8 +96,8 @@
         fn {
             bindings = <
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &macro_vim_to_end_of_function            &tog 1                                                   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &kp HYPER5                                               &kp HYPER7  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
- &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &kp HYPER6  &trans  &trans                  &trans  &trans   &kp HYPER8  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
+ &trans  &trans  &trans  &kp LBRC  &kp RBRC  &trans             &kp LS(LC(LA(LG(N5))))                                               &kp LS(LC(LA(LG(N7))))  &macro_vim_copy  &kp CARET  &kp DOLLAR   &kp PERCENT   &trans   &trans
+ &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR  &kp RPAR  &trans             &kp LS(LC(LA(LG(N6))))  &trans  &trans                  &trans  &trans   &kp LS(LC(LA(LG(N8))))  &kp LEFT  &kp DOWN  &kp UP &kp RIGHT   &macro_vim_to_end_of_line   &kp ESC
  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT  &kp RBKT  &trans                            &trans                  &trans                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS   &kp EQUAL   &trans
  &trans  &trans  &trans  &macro_delete_word  &trans                    &kp RGUI  &trans  &trans                  &trans  &trans  &kp RGUI          &trans  &trans   &trans   &trans   &trans
             >;
