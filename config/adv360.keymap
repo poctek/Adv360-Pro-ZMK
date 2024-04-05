@@ -17,7 +17,11 @@
 
 &mt { tapping-term-ms = <300>; };
 
-&lt { quick_tap_ms = <100>; };
+&lt {
+    quick_tap_ms = <100>;
+    require-prior-idle-ms = <100>;
+    tapping-term-ms = <100>;
+};
 
 / {
     combos {
@@ -91,7 +95,7 @@
 &kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 1                                                                            &mo 3                   &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp LS(LC(LA(LG(N1))))                                                            &kp LS(LC(LA(LG(N3))))  &kp Y   &kp U    &kp I      &kp O     &kp P     &kp BSLH
 &td1       &kp A      &kp S   &kp D     &lt 5 F    &kp G   &kp LS(LC(LA(LG(N2))))  &tog 4         &kp LALT      &kp LG(T)         &kp ESC    &kp LS(LC(LA(LG(N4))))  &kp H   &kp J    &kp K      &kp L     &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
-&kp LSHFT  &kp Z      &kp X   &kp C     &lt 2 V    &kp B                                          &none         &kp LG(LA(UP))                                       &kp N   &lt 5 M  &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X   &kp C     &lt 1 V    &kp B                                          &none         &kp LG(LA(UP))                                       &kp N   &lt 5 M  &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 2      &kp GRAVE  &mo 4   &kp LEFT  &kp RIGHT          &kp LGUI                &kp BACKSPACE  &none         &kp LG(LA(DOWN))  &kp ENTER  &kp SPACE                       &kp UP   &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
             >;
         };
