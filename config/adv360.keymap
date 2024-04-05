@@ -17,11 +17,7 @@
 
 &mt { tapping-term-ms = <300>; };
 
-&lt {
-    quick_tap_ms = <100>;
-    require-prior-idle-ms = <100>;
-    tapping-term-ms = <100>;
-};
+&lt { require-prior-idle-ms = <100>; };
 
 / {
     combos {
