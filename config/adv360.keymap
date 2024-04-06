@@ -92,17 +92,17 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 5                                                                            &mo 5                   &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &tog 4                                                                            &mo 5                   &kp N6  &kp N7   &kp N8     &kp N9    &kp N0    &kp MINUS
 &kp TAB    &kp Q      &kp W   &kp E     &kp R      &kp T   &kp LS(LC(LA(LG(N1))))                                                            &kp LS(LC(LA(LG(N3))))  &kp Y   &kp U    &kp I      &kp O     &kp P     &kp BSLH
 &td1       &kp A      &kp S   &kp D     &lt 2 F    &kp G   &kp LS(LC(LA(LG(N2))))  &tog 3         &kp LALT      &kp LG(T)         &kp ESC    &kp LS(LC(LA(LG(N4))))  &kp H   &kp J    &kp K      &kp L     &kp SEMI  &mt RIGHT_CONTROL SINGLE_QUOTE
-&kp LSHFT  &kp Z      &kp X   &kp C     &lt 5 V    &kp B                                          &none         &kp LG(LA(UP))                                       &kp N   &lt 2 M  &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X   &kp C     &lt 4 V    &kp B                                          &none         &kp LG(LA(UP))                                       &kp N   &lt 2 M  &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
 &mo 1      &kp GRAVE  &mo 3   &kp LEFT  &kp RIGHT          &kp LGUI                &kp BACKSPACE  &none         &kp LG(LA(DOWN))  &kp ENTER  &kp SPACE                       &kp UP   &kp DOWN   &kp LBKT  &kp RBKT  &mo 1
             >;
         };
 
         fn {
             bindings = <
-&kp F1   &kp F2        &kp F3         &kp F4              &kp F5    &trans  &tog 0                                                      &mo 5                   &kp F7                   &kp F8          &kp F9      &kp F10      &kp F11    &kp F12
+&kp F1   &kp F2        &kp F3         &kp F4              &kp F5    &trans  &tog 0                                                      &mo 4                   &kp F7                   &kp F8          &kp F9      &kp F10      &kp F11    &kp F12
 &trans   &trans        &trans         &kp LBRC            &kp RBRC  &trans  &kp LS(LC(LA(LG(N5))))                                      &kp LS(LC(LA(LG(N7))))  &macro_vim_copy          &kp CARET       &kp DOLLAR  &kp PERCENT  &trans     &trans
 &kp ESC  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LPAR            &kp RPAR  &trans  &kp LS(LC(LA(LG(N6))))  &trans  &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT                 &kp DOWN        &kp UP      &kp RIGHT    &trans     &kp ESC
 &trans   &kp LG(LEFT)  &kp LG(RIGHT)  &kp LBKT            &kp RBKT  &trans                                  &trans      &trans                                  &macro_tmux_visual_mode  &kp UNDERSCORE  &kp MINUS   &kp PLUS     &kp EQUAL  &trans
@@ -122,11 +122,21 @@
 
         layer_text_edit {
             bindings = <
-&kp F1     &kp F2      &kp F3     &kp F4      &kp F5       &kp F6  &to 0                                                    &mo 5              &kp F7        &kp F8        &kp F9      &kp F10        &kp F11  &kp F12
+&kp F1     &kp F2      &kp F3     &kp F4      &kp F5       &kp F6  &to 0                                                    &mo 4              &kp F7        &kp F8        &kp F9      &kp F10        &kp F11  &kp F12
 &trans     &trans      &trans     &trans      &kp K_REDO   &trans  &none                                                    &none              &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans   &trans
 &trans     &trans      &trans     &trans      &trans       &trans  &none     &to 0              &trans      &trans  &trans  &none              &kp LA(LEFT)  &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)  &trans   &trans
 &kp LSHFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans                               &trans      &trans                             &trans        &trans        &trans      &trans         &trans   &kp RSHIFT
 &trans     &trans      &trans     &kp LEFT    &kp RIGHT            &kp LGUI  &kp LA(BACKSPACE)  &trans      &trans  &to 0   &kp LA(BACKSPACE)                &kp UP        &kp DOWN    &trans         &trans   &trans
+            >;
+        };
+
+        keypad {
+            bindings = <
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                           &mo 4      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp Q      &trans    &trans    &trans     &kp T   &none                                                            &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none         &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_GUI  &kp BACKSPACE  &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 1
             >;
         };
 
@@ -137,16 +147,6 @@
 &none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none         &none                             &none      &none                                           &none  &none       &none       &none  &none  &none
 &none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                &bl BL_INC  &bl BL_DEC  &none  &none  &none
-            >;
-        };
-
-        keypad {
-            bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                           &mo 5      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &trans    &trans    &trans     &kp T   &none                                                            &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none         &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                                &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 1      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp LEFT_GUI  &kp BACKSPACE  &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 1
             >;
         };
     };
