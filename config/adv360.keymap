@@ -47,6 +47,7 @@
         combo_change_language_left {
             bindings = <&kp LG(SPACE)>;
             key-positions = <29 32>;
+            timeout-ms = <100>;
         };
 
         combo_change_language_right {
