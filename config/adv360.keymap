@@ -164,14 +164,14 @@
         macro_vim_save_exit: macro_vim_save_exit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp W &kp Q>;
+            bindings = <&kp COLON &kp W &kp Q &kp ENTER>;
             label = "MACRO_VIM_SAVE_EXIT";
         };
 
         macro_vim_exit_no_save: macro_vim_exit_no_save {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp COLON &kp Q &kp A &kp EXCL>;
+            bindings = <&kp COLON &kp Q &kp A &kp EXCL &kp ENTER>;
             label = "MACRO_VIM_EXIT_NO_SAVE";
         };
     };
