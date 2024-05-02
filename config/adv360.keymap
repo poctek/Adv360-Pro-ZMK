@@ -120,7 +120,7 @@
             bindings = <&mo>, <&kp>;
 
             hold-trigger-key-positions = <23 23 24 25 26 41 42 43 44 55 56 57 58 49>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <100>;
             hold-trigger-on-release;
         };
 
