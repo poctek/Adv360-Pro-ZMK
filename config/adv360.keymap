@@ -29,6 +29,7 @@
         comma_test {
             bindings = <&kp COMMA>;
             key-positions = <51 41>;
+            timeout-ms = <100>;
         };
     };
 };
@@ -151,6 +152,13 @@
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&kp LG(SPACE)>;
         };
+
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COMMA";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp LS(SLASH)>;
+        };
     };
 
     macros {
@@ -198,7 +206,7 @@
 &kp EQUAL       &kp N1        &kp N2           &kp N3       &kp N4               &kp N5  &tog 4                                                                                     &mo 5                   &kp N6  &kp N7         &kp N8        &kp N9       &kp N0                &kp MINUS
 &kp TAB         &kp Q         &kp W            &kp E        &kp R                &kp T   &kp LS(LC(LA(LG(N1))))                                                                     &kp LS(LC(LA(LG(N3))))  &kp Y   &kp U          &kp I         &kp O        &kp P                 &kp BSLH
 &td1            &hml LCTRL A  &hml LEFT_ALT S  &hml LCMD D  &hml_shift LSHIFT F  &kp G   &kp LS(LC(LA(LG(N2))))  &tog 3         &kp LALT               &kp LG(T)         &kp ESC    &kp LS(LC(LA(LG(N4))))  &kp H   &hmr RSHIFT J  &hmr RCMD K   &hmr RALT L  &hmr RCTRL SEMICOLON  &mt RIGHT_CONTROL SINGLE_QUOTE
-&td_shift_lang  &kp Z         &kp X            &btl 2 C     &nmp 4 V             &kp B                                          &kp C_PLAY_PAUSE       &kp LG(LA(UP))                                       &kp N   &kp M          &btr 2 COMMA  &kp DOT      &kp FSLH              &td_shift_lang
+&td_shift_lang  &kp Z         &kp X            &btl 2 C     &nmp 4 V             &kp B                                          &kp C_PLAY_PAUSE       &kp LG(LA(UP))                                       &kp N   &kp M          &btr 2 COMMA  &td_comma    &kp FSLH              &td_shift_lang
 &mo 1           &kp GRAVE     &kp LG(SPACE)    &kp LEFT     &kp RIGHT                    &kp LCMD                &kp BACKSPACE  &kp LG(LS(SPACE))      &kp LG(LA(DOWN))  &kp ENTER  &kp SPACE                       &kp UP         &kp DOWN      &kp LBKT     &kp RBKT              &mo 1
             >;
         };
