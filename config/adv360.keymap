@@ -33,13 +33,13 @@
         };
 
         combo_minus {
-            bindings = <&none>;
+            bindings = <&kp MINUS>;
             key-positions = <65 40>;
             timeout-ms = <100>;
         };
 
         combo_underscore {
-            bindings = <&none>;
+            bindings = <&kp UNDERSCORE>;
             key-positions = <41 65>;
             timeout-ms = <100>;
         };
