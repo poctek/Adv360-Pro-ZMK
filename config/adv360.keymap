@@ -31,6 +31,18 @@
             key-positions = <51 41>;
             timeout-ms = <100>;
         };
+
+        combo_minus {
+            bindings = <&none>;
+            key-positions = <65 40>;
+            timeout-ms = <100>;
+        };
+
+        combo_underscore {
+            bindings = <&none>;
+            key-positions = <41 65>;
+            timeout-ms = <100>;
+        };
     };
 };
 
