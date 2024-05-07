@@ -204,7 +204,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHIFT_LANG";
             #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&kp LG(SPACE)>, <&caps_word>;
+            bindings = <&sk LSHIFT>, <&kp LG(SPACE)>, <&caps_word>;
         };
 
         td_comma: td_comma {
@@ -219,6 +219,34 @@
             label = "TD_COPILOT_COMLPETE";
             #binding-cells = <0>;
             bindings = <&kp BSLH>, <&kp LC(BSLH)>;
+        };
+
+        td_workspace_1: td_workspace_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WORKSPACE_1";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp LC(NUMBER_1)>;
+        };
+
+        td_workspace_3: td_workspace_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WORKSPACE_3";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp LC(NUMBER_3)>;
+        };
+
+        td_workspace_2: td_workspace_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WORKSPACE_2";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp LC(NUMBER_2)>;
+        };
+
+        td_workspace_4: td_workspace_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_WORKSPACE_4";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp LC(NUMBER_4)>;
         };
     };
 
