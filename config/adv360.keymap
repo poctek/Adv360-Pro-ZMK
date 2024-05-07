@@ -218,7 +218,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_COPILOT_COMLPETE";
             #binding-cells = <0>;
-            bindings = <&kp NON_US_BACKSLASH>, <&kp LC(TAB)>;
+            bindings = <&kp NON_US_BACKSLASH>, <&kp LC(BSLH)>;
         };
     };
 
