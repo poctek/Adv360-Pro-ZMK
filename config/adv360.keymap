@@ -35,7 +35,7 @@
         combo_underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <41 42>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
         };
 
         combo_plus {
@@ -53,7 +53,7 @@
         combo_lbc {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <31 32>;
-            timeout-ms = <100>;
+            timeout-ms = <50>;
         };
 
         combo_rpar {
