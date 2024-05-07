@@ -213,6 +213,13 @@
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&macro_comma_space>;
         };
+
+        td_copilot_comlpete: td_copilot_comlpete {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_COPILOT_COMLPETE";
+            #binding-cells = <0>;
+            bindings = <&kp NON_US_BACKSLASH>, <&kp LC(TAB)>;
+        };
     };
 
     macros {
@@ -256,6 +263,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(SLASH) &kp SPACE>;
             label = "MACRO_COMMA_SPACE";
+        };
+
+        macro_copilot_complete: macro_copilot_complete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp>;
+            label = "MACRO_COPILOT_COMPLETE";
         };
     };
 
