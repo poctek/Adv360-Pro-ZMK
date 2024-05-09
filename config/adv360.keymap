@@ -85,6 +85,36 @@
             key-positions = <50 51>;
             timeout-ms = <50>;
         };
+
+        combo_two_dots {
+            bindings = <&kp COLON>;
+            key-positions = <43 44>;
+        };
+
+        combo_larrow {
+            bindings = <&kp LESS_THAN>;
+            key-positions = <56 57>;
+        };
+
+        combo_rarrow {
+            bindings = <&kp GREATER_THAN>;
+            key-positions = <57 58>;
+        };
+
+        combo_rlang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <42 43>;
+        };
+
+        combo_llang {
+            bindings = <&kp LG(SPACE)>;
+            key-positions = <31 30>;
+        };
+
+        combo_dquotes {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <43 44>;
+        };
     };
 };
 
