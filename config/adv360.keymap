@@ -244,7 +244,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SHIFT_CAPS";
             #binding-cells = <0>;
-            bindings = <&sk LSHIFT>, <&caps_word>;
+            bindings = <&sticky_shift LEFT_SHIFT>, <&caps_word>;
         };
 
         td_comma: td_comma {
@@ -287,6 +287,16 @@
             label = "TD_WORKSPACE_4";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_4>, <&kp LC(NUMBER_4)>;
+        };
+
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            quick-release;
+            release-after-ms = <1000>;
+            ignore-modifiers;
         };
     };
 
