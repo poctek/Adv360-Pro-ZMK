@@ -93,12 +93,12 @@
 
         combo_larrow {
             bindings = <&kp LESS_THAN>;
-            key-positions = <56 57>;
+            key-positions = <24 25>;
         };
 
         combo_rarrow {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <57 58>;
+            key-positions = <25 26>;
         };
 
         combo_rlang {
@@ -114,6 +114,16 @@
         combo_dquotes {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <43 44>;
+        };
+
+        combo_caret {
+            bindings = <&kp CARET>;
+            key-positions = <22 23>;
+        };
+
+        combo_dollar {
+            bindings = <&kp DOLLAR>;
+            key-positions = <23 24>;
         };
     };
 };
