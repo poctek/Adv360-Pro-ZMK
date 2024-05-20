@@ -208,7 +208,6 @@
             #binding-cells = <1>;
             quick-release;
             release-after-ms = <1000>;
-            ignore-modifiers;
         };
     };
 
