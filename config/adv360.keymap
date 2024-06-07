@@ -270,11 +270,11 @@
 
         fn {
             bindings = <
-&kp F1   &kp F2                                &kp F3                           &kp F4              &kp F5    &trans  &tog 0                                                                 &mo 3                   &kp F7           &kp F8     &kp F9      &kp F10      &kp F11                  &kp F12
-&trans   &macro_vim_exit_no_save               &macro_vim_save_exit             &kp LBRC            &kp RBRC  &trans  &kp LS(LC(LA(LG(N5))))                                                 &kp LS(LC(LA(LG(N7))))  &macro_vim_copy  &kp CARET  &kp DOLLAR  &kp PERCENT  &macro_tmux_visual_mode  &trans
-&kp ESC  &kp LA(LEFT)                          &kp LA(RIGHT)                    &kp LPAR            &kp RPAR  &trans  &kp LS(LC(LA(LG(N6))))  &trans             &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT         &kp DOWN   &kp UP      &kp RIGHT    &trans                   &kp ESC
-&trans   &mt LA(LS(LG(LEFT_ARROW))) LA(LS(Z))  &mt LA(LS(LG(RIGHT))) LA(LS(X))  &kp LBKT            &kp RBKT  &trans                                             &trans      &trans                                  &kp PLUS         &kp EQUAL  &kp MINUS   &kp PLUS     &kp EQUAL                &trans
-&trans   &kp LG(LS(NUMBER_4))                  &kp LG(LS(NUMBER_4))             &macro_delete_word  &trans            &kp RGUI                &kp LA(BACKSPACE)  &trans      &trans  &trans  &kp RG(SPACE)                            &trans     &trans      &trans       &trans                   &trans
+&kp F1   &kp F2                                     &kp F3                           &kp F4              &kp F5    &trans  &tog 0                                                                 &mo 3                   &kp F7           &kp F8     &kp F9      &kp F10      &kp F11                  &kp F12
+&trans   &macro_vim_exit_no_save                    &macro_vim_save_exit             &kp LBRC            &kp RBRC  &trans  &kp LS(LC(LA(LG(N5))))                                                 &kp LS(LC(LA(LG(N7))))  &macro_vim_copy  &kp CARET  &kp DOLLAR  &kp PERCENT  &macro_tmux_visual_mode  &trans
+&kp ESC  &kp LA(LEFT)                               &kp LA(RIGHT)                    &kp LPAR            &kp RPAR  &trans  &kp LS(LC(LA(LG(N6))))  &trans             &trans      &trans  &trans  &kp LS(LC(LA(LG(N8))))  &kp LEFT         &kp DOWN   &kp UP      &kp RIGHT    &trans                   &kp ESC
+&trans   &mt LS(LG(LEFT_ARROW)) LA(LS(LEFT_ARROW))  &mt LS(LG(RIGHT)) LA(LS(RIGHT))  &kp LBKT            &kp RBKT  &trans                                             &trans      &trans                                  &kp PLUS         &kp EQUAL  &kp MINUS   &kp PLUS     &kp EQUAL                &trans
+&trans   &kp LG(LS(NUMBER_4))                       &kp LG(LS(NUMBER_4))             &macro_delete_word  &trans            &kp RGUI                &kp LA(BACKSPACE)  &trans      &trans  &trans  &kp RG(SPACE)                            &trans     &trans      &trans       &trans                   &trans
             >;
         };
 
