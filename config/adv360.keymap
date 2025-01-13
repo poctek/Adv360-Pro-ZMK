@@ -291,9 +291,9 @@
         keypad {
             bindings = <
 &kp EQUAL  &kp N1     &kp N2  &kp N3    &kp N4     &kp N5  &trans                                                           &mo 3      &kp N6  &kp KP_NUM    &kp ASTERISK  &kp KP_DIVIDE  &kp EQUAL     &kp MINUS
-&kp TAB    &kp Q      &trans  &trans    &trans     &kp T   &none                                                            &none      &kp Y   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_MINUS  &kp BSLH
+&kp TAB    &kp Q      &trans  &trans    &trans     &kp T   &none                                                            &none      &kp Y   &kp N7        &kp N8        &kp NUMBER_3   &kp KP_MINUS  &kp BSLH
 &kp ESC    &kp A      &kp S   &kp D     &kp F      &kp G   &none         &kp LCTRL      &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS   &kp SQT
-&kp LSHFT  &kp Z      &kp X   &kp C     &kp V      &kp B                                &kp HOME      &kp PG_UP                        &kp N   &kp N7        &kp N8        &kp N9         &kp KP_ENTER  &kp RSHFT
+&kp LSHFT  &kp Z      &kp X   &kp C     &kp V      &kp B                                &kp HOME      &kp PG_UP                        &kp N   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3   &kp KP_ENTER  &kp RSHFT
 &mo 1      &kp GRAVE  &trans  &kp LEFT  &kp RIGHT          &kp LEFT_GUI  &kp BACKSPACE  &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP        &kp DOWN      &kp KP_DOT     &kp COMMA     &mo 1
             >;
         };
