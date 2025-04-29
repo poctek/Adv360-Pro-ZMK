@@ -28,7 +28,7 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <23 24>;
+            key-positions = <23 22>;
             timeout-ms = <50>;
         };
 
